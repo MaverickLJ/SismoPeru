@@ -94,39 +94,39 @@ else:
 
 #Calcula las sumas de las columnas numéricas y convierte a float
 total_terremotos = terremotos_por_departamento.sum()
-total_clicks = cantidad_max_terremotos
-total_spent = cantidad_min_terremotos
-total_conversions = sismo_mayor_profundidad['PROFUNDIDAD']
-total_approved_conversions = magnitud_maxima
+total_cantidad_max_terremotos= cantidad_max_terremotos
+total_cantidad_min_terremotos = cantidad_min_terremotos
+total_sismo_mayor_profundidad = sismo_mayor_profundidad['PROFUNDIDAD']
+total_magnitud_maxima = magnitud_maxima
 
 # Convierte los valores float a objetos Decimal
 total_terremotos = Decimal(str(total_terremotos))
-total_clicks = Decimal(str(total_clicks))
-total_spent = Decimal(str(cantidad_min_terremotos))
-total_conversions = Decimal(str(total_conversions))
-total_approved_conversions = Decimal(str(total_approved_conversions))
+total_cantidad_max_terremotos= Decimal(str(total_cantidad_max_terremotos))
+total_cantidad_min_terremotos = Decimal(str(total_cantidad_min_terremotos))
+total_sismo_mayor_profundidad = Decimal(str(total_sismo_mayor_profundidad))
+total_magnitud_maxima = Decimal(str(total_magnitud_maxima))
 
 total1, total2, total3, total4, total5 = st.columns(5, gap='large')
 
 with total1:
-    st.image('images/impression.png',use_column_width='Auto')
+    st.image('images/terremoto_totales.jpeg',use_column_width='Auto')
     st.metric(label = 'Total Terremotos', value= numerize(total_terremotos))
     
 with total2:
-    st.image('images/tap.png',use_column_width='Auto')
-    st.metric(label=f"Terremoto Máximo: {departamento_max_terremotos}", value=numerize(total_clicks))
+    st.image('images/terremoto_maximo.png',use_column_width='Auto')
+    st.metric(label=f"Terremoto Máximo: {departamento_max_terremotos}", value=numerize(total_cantidad_max_terremotos))
 
 with total3:
-    st.image('images/hand.png',use_column_width='Auto')
-    st.metric(label= f'Terremoto Minímo: {departamento_min_terremotos}',value=numerize(total_spent,2))
+    st.image('images/terremoto_mínimo.png',use_column_width='Auto')
+    st.metric(label= f'Terremoto Minímo: {departamento_min_terremotos}',value=numerize(total_cantidad_min_terremotos,2))
 
 with total4:
-    st.image('images/conversion.png',use_column_width='Auto')
-    st.metric(label=f"Terremoto con Mayor Profundidad: {sismo_mayor_profundidad['DEPARTAMENTO']}",value=numerize(total_conversions))
+    st.image('images/profundidad.png',use_column_width='Auto')
+    st.metric(label=f"Terremoto con Mayor Profundidad: {sismo_mayor_profundidad['DEPARTAMENTO']}",value=numerize(total_sismo_mayor_profundidad))
 
 with total5:
-    st.image('images/app_conversion.png',use_column_width='Auto')
-    st.metric(label=f"Terremoto con Mayor Magnitud: {departamento_max_magnitud}",value=numerize(total_approved_conversions))
+    st.image('images/magnitud.png',use_column_width='Auto')
+    st.metric(label=f"Terremoto con Mayor Magnitud: {departamento_max_magnitud}",value=numerize(total_magnitud_maxima))
 
 Q1,Q2 = st.columns(2)
 
