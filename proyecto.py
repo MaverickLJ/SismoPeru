@@ -1,4 +1,3 @@
-import folium
 import pandas as pd
 import geopandas as gpd
 from shapely.geometry import Point
@@ -9,7 +8,6 @@ from numerize.numerize import numerize
 from decimal import Decimal
 from datetime import datetime
 import matplotlib.pyplot as plt
-from streamlit_folium import folium_static
 
 st.set_page_config(page_title='CATALOGO SISMICO 1960-2021 (IGP)',
                    layout='wide',
