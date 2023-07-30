@@ -1,0 +1,8 @@
+
+ 	pydeck	For Deck.Gl integration
+ 	pandas	https://pandas.pydata.org/ for data processing
+ 	streamlit	because we're working with streamlit.... 
+ 	shapely	https://pypi.org/project/Shapely/ for polygon management
+ 	fiona	Python's GDAL API https://pypi.org/project/Fiona/
+ 	geopandas	Geospatial data processing in /ython https://geopandas.org/
+ 	pygeos	Extends Geopandas abilitie

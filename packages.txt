@@ -1,1 +1,2 @@
-geopandas
+gdal-bin
+python-rtree
