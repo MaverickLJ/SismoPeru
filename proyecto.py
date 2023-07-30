@@ -6,8 +6,8 @@ import streamlit as st
 import plotly.express as px
 from numerize.numerize import numerize
 from decimal import Decimal
-from datetime import datetime
-import matplotlib.pyplot as plt
+# from datetime import datetime
+# import matplotlib.pyplot as plt
 
 st.set_page_config(page_title='CATALOGO SISMICO 1960-2021 (IGP)',
                    layout='wide',
