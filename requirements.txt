@@ -1,1 +1,2 @@
 geopandas==0.12.2
+plotly_express==0.4.0
